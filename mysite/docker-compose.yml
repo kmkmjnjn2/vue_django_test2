@@ -19,7 +19,7 @@ services:
     ports:
       - "80:7000"
     depends_on:
-      - app
+      - web
     networks:
       - web_network
     volumes:
