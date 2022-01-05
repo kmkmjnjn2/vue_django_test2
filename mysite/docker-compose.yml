@@ -1,0 +1,32 @@
+version: "3"
+services:
+  web:
+    restart: always
+    build: .
+    container_name: web
+    command:  "uwsgi --ini uwsgi.ini"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    networks:
+      - web_network
+
+  nginx:
+    restart: always
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - "80:7000"
+    depends_on:
+      - app
+    networks:
+      - web_network
+    volumes:
+      - ./vue_test/dist:/static
+
+networks:
+  web_network:
+    driver: bridge
+
+
