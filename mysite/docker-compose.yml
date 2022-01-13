@@ -23,7 +23,7 @@ services:
     networks:
       - web_network
     volumes:
-      - ./vue_test/dist:/static
+      - ./vue-admin-template/dist:/static
 
 networks:
   web_network:
