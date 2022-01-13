@@ -5,13 +5,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
 from .boookinfo_serializers import bookinfoListSerializer
+from .lineinfo_serializers import lineinfoListSerializer
 import json
 
 
 # 解决前端post请求 crsf问题
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import BookInfo
+from .models import BookInfo,LineInfo
+
 
 
 @csrf_exempt
@@ -50,3 +52,15 @@ def Books(request):
     serializer = bookinfoListSerializer(bookinfo,many=True)
     print("drf框架数据已经生成：",serializer.data)
     return JsonResponse(serializer.data,safe=False)
+
+@csrf_exempt
+def Line(request):
+    # 查询地板机械化数据
+
+    #序列化数据
+    lineinfo = LineInfo.objects.all()
+    serializer = lineinfoListSerializer(lineinfo,many=True)
+    print("drf框架数据已经生成：",serializer.data)
+    return JsonResponse(serializer.data,safe=False)
+
+

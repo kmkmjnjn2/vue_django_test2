@@ -63,7 +63,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['vue_test/dist'],
+        'DIRS': ['vue-admin-template/dist'],
         'APP_DIRS': False, #不在允许Django按照默认方式寻找末班文件
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +77,7 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'vue_test/dist/static/'),
+    os.path.join(BASE_DIR, 'vue-admin-template/dist/static/'),
 
 ]
 
@@ -99,6 +99,7 @@ DATABASES = {
         'PASSWORD': '1Lpazx)!azsx',
         'HOST': 'rm-2zezgsw1nnjrrddw3to.mysql.rds.aliyuncs.com',
         'PORT': '3306',
+        'AUTOCOMMIT':True,
     }
 }
 
