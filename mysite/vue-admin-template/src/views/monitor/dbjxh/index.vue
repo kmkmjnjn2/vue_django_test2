@@ -220,7 +220,7 @@
 
         },
         BtnLine:function () {
-          axios.post('http://localhost/api/Line')
+          axios.post('http://127.0.0.1/api/Line')
           .then((response)=>{
             console.log('response is :',response)
             console.log('response.data is ',response.data)
