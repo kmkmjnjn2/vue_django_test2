@@ -130,7 +130,9 @@
 
 
 <!--      </div>-->
-
+      <div>
+        <h1>分割</h1>
+      </div>
 
 <!--     <div>-->
 <!--      <button @click="BtnBooks">点击返回booklist列表</button>-->
@@ -220,7 +222,7 @@
 
         },
         BtnLine:function () {
-          axios.post('http://127.0.0.1/api/Line')
+          axios.post('http://localhost/api/Line')
           .then((response)=>{
             console.log('response is :',response)
             console.log('response.data is ',response.data)
