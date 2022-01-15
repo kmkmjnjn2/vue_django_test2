@@ -130,9 +130,9 @@
 
 
 <!--      </div>-->
-      <div>
-        <h1>分割</h1>
-      </div>
+<!--      <div>-->
+<!--        <h1>分割</h1>-->
+<!--      </div>-->
 
 <!--     <div>-->
 <!--      <button @click="BtnBooks">点击返回booklist列表</button>-->
@@ -222,7 +222,7 @@
 
         },
         BtnLine:function () {
-          axios.post('http://localhost/api/Line')
+          axios.post('http://47.94.218.39/api/Line')
           .then((response)=>{
             console.log('response is :',response)
             console.log('response.data is ',response.data)
