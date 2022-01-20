@@ -7,7 +7,7 @@ function resolve(dir) {
 }
 
 // const name = defaultSettings.title || 'vue Admin Template' // page title
-const name = '地板机械化' // page title
+const name = '蔚山焊装生产线监控系统' // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
